@@ -2,7 +2,7 @@
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
-source ${ABSDIR}.profile.sh
+source ${ABSDIR}/profile.sh
 
 REPOSITORY=/home/ec2-user/app/step3
 PROJECT_NAME=webservice-practice
@@ -18,7 +18,7 @@ JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
 
 echo "> JAR NAME: $JAR_NAME"
 
-echo "> $JAR_NAME 에 실행권환 추가"
+echo "> $JAR_NAME 에 실행권한 추가"
 
 chmod +x $JAR_NAME
 
